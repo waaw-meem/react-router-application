@@ -4,7 +4,7 @@ import classes from "./NewMeetup.module.css"
 
 
 
-function NewMeetup(){
+function NewMeetup(props){
     const inputTitleRef = useRef();
     const inputImageRef = useRef();
     const inputAddressRef = useRef();
@@ -26,7 +26,8 @@ function NewMeetup(){
         description:meetupDescription
        }
 
-       console.log(metadata)
+    //    console.log(metadata)
+    props.addNewMeetup(metadata)
 
     }
     return(

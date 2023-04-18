@@ -5,4 +5,8 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(<BrowserRouter><App/></BrowserRouter>,document.querySelector("#root"))
+import { FavouriteContextProvider } from "./store/favourite-context";
+
+
+ReactDOM.render(<FavouriteContextProvider><BrowserRouter><App/></BrowserRouter>
+</FavouriteContextProvider>,document.querySelector("#root"))
